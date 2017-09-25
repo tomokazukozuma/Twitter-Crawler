@@ -1,0 +1,26 @@
+{
+  "name": "Twitter-Crawler",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "twitter-fll": "babel-node script/twitter/twitter_follower.js --screenName=Tomokazu106",
+    "twitter-fll-tw": "babel-node script/twitter/twitter_follower_tweet.js",
+    "lint": "eslint . --ext .js"
+  },
+  "dependencies": {
+    "async": "2.4.0",
+    "commander": "2.9.0",
+    "config": "1.25.1",
+    "dotenv": "4.0.0",
+    "moment": "^2.18.1",
+    "mysql": "2.13.0",
+    "sequelize": "3.30.4",
+    "twitter": "1.7.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.0",
+    "babel-plugin-root-import": "5.1.0",
+    "babel-preset-env": "1.2.2",
+    "eslint": "3.18.0"
+  }
+}

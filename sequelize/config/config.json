@@ -1,0 +1,13 @@
+{
+    "local": {
+        "username": "root",
+        "password": null,
+        "database": "twitter_crawler",
+        "host": "127.0.0.1",
+        "dialect": "mysql",
+        "dialectOptions": {
+            "charset": "utf8mb4"
+        },
+        "logging": false
+    }
+}
