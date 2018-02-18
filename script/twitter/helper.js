@@ -15,7 +15,7 @@ function convert(tweetList) {
     return tweetList.map(function(index, tweet) {
         const unixTime = $(tweet).find('._timestamp').attr('data-time-ms');
         return {
-            accountName: $(tweet).find('.tweet').attr('data-name'),
+            accountName: $(tweet).find('.tweet').attr('data-name').replace( /\\/g, ''),
             screenName: $(tweet).find('.tweet').attr('data-screen-name'),
             accountId: $(tweet).find('.tweet').attr('data-user-id'),
             text: $(tweet).find('.tweet-text').text().trim().replace('"','\"'),
