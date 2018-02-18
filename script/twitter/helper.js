@@ -30,4 +30,4 @@ function convert(tweetList) {
     }).get();
 }
 
-export {convert, convertForProfile};
+export {convert};
