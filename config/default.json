@@ -1,5 +1,11 @@
 {
+	"dateFormat": "YYYY-MM-DD HH:mm:ss",
+    "encode": "utf8",
     "twitter": {
+    	"api": {
+            "url": "https://twitter.com/"
+        },
+        "csvKeys": "\"account_name\",\"screen_name\",\"account_id\",\"text\",\"image_url\",\"created_at\",\"tweet_id\",\"tweet_url\",\"reply_count\",\"retweet_count\",\"favorite_count\",\"retweet_flag\",\"retweet_id\",\"retweeter\"",
         "consumerKey": null,
         "consumerSecret": null,
         "accessTokenKey": null,
