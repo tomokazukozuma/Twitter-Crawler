@@ -35,7 +35,7 @@ async.waterfall([
         .set('Content-Type', 'application/json; charset=utf-8')
         .query({
             vertical: 'default',
-            l: 'ja', // 引っかかる言語の投稿
+            // l: 'ja', // 引っかかる言語の投稿
             q: keyword,
             src: 'typd',
             lang: 'ja'
