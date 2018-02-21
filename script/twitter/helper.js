@@ -18,7 +18,7 @@ function convert(tweetList) {
             accountName: $(tweet).find('.tweet').attr('data-name').replace(/(\\|\")/g, ''),
             screenName: $(tweet).find('.tweet').attr('data-screen-name'),
             accountId: $(tweet).find('.tweet').attr('data-user-id'),
-            text: $(tweet).find('.tweet-text').text().trim()..replace(/(\\|\")/g, ''),
+            text: $(tweet).find('.tweet-text').text().trim().replace(/(\\|\")/g, ''),
             tweet_id: $(tweet).find('.tweet').attr('data-tweet-id'),
             tweetUrl: 'https://twitter.com' + $(tweet).find('.tweet').attr('data-permalink-path'),
             replyCount: $(tweet).find('.ProfileTweet-action.ProfileTweet-action--reply .ProfileTweet-actionCountForPresentation').text().replace( /,/g, ''),
