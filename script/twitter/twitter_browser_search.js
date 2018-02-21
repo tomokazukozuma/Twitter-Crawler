@@ -43,7 +43,7 @@ async.waterfall([
         .end(function(error, res) {
             if (error) {
                 console.log('---- error ----');
-                callback();
+                callback(error);
                 return;
             }
             const $ = cheerio.load(res.text);
@@ -76,7 +76,7 @@ async.waterfall([
                 .end(function(error, res) {
                     if (error) {
                         console.log('------ error -----');
-                        callback();
+                        callback(error);
                         return;
                     }
                     const result = JSON.parse(res.text);
