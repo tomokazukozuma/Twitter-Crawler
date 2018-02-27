@@ -25,7 +25,7 @@ const csvKeys = config.get('twitter.csvKeys');
 let maxPosition;
 let lastCreatedAt = moment(new Date()).format(dateFormat);
 
-fs.writeFileSync(logFileName, "\"accountName\",\"screenName\",\"accountId\",\"text\",\"tweetId\",\"tweetUrl\",\"replyCount\",\"retweetCount\",\"favoriteCount\",\"tweetDatetime\",\"insertDatetime\"" + '\n', encode);
+fs.writeFileSync(logFileName, "\"keyword\",\"accountName\",\"screenName\",\"accountId\",\"text\",\"tweetId\",\"tweetUrl\",\"replyCount\",\"retweetCount\",\"favoriteCount\",\"tweetDatetime\",\"insertDatetime\"" + '\n', encode);
 
 async.waterfall([
     function(callback) {
@@ -119,7 +119,7 @@ const tweetToCsv = function(twitterData) {
         return;
     }
 
-    const parsedTweetList = convert(tweetList);
+    const parsedTweetList = convert(tweetList, keyword);
 
     lastCreatedAt = parsedTweetList[parsedTweetList.length - 1].tweetDatetime;
     console.log(lastCreatedAt)
