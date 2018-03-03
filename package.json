@@ -7,7 +7,8 @@
     "twitter-fll-tw": "babel-node script/twitter/twitter_follower_tweet.js",
     "twitter-br": "babel-node script/twitter/twitter_browser_search.js --word",
     "twitter-la": "babel-node script/twitter/twitter_latest_tweet.js --word",
-    "lint": "eslint . --ext .js"
+    "lint": "eslint . --ext .js",
+    "build": "babel script -d dst"
   },
   "dependencies": {
     "async": "2.4.0",
