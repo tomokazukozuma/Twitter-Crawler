@@ -89,7 +89,7 @@ async.waterfall([
         async.parallel({
             // firehoseに投げる
             firehose: function(callback) {
-                let csv = json2csv({data: latestTweetList, hasCSVColumnTitle: false});
+                let csv = json2csv({data: latestTweetList, hasCSVColumnTitle: false}) + '\n';
                 firehose.putRecord({
                     DeliveryStreamName: config.get('AWS.firehose.DeliveryStreamName'),
                     Record: {
