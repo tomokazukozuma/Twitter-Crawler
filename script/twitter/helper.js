@@ -23,7 +23,7 @@ function convert(tweetList, keyword) {
             screenName: $(tweet).find('.tweet').attr('data-screen-name'),
             accountId: $(tweet).find('.tweet').attr('data-user-id'),
             text: $(tweet).find('.tweet-text').text().trim().replace(/(\\|\")/g, ''),
-            tweet_id: $(tweet).find('.tweet').attr('data-tweet-id'),
+            tweetId: $(tweet).find('.tweet').attr('data-tweet-id'),
             replyCount: replyCount === '' ? 0 : Number(replyCount),
             retweetCount: retweetCount === '' ? 0 : Number(replyCount),
             favoriteCount: favoriteCount === '' ? 0 : Number(replyCount),
