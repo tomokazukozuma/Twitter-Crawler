@@ -6,10 +6,12 @@
     "twitter-fll": "babel-node script/twitter/twitter_follower.js --screenName=Tomokazu106",
     "twitter-fll-tw": "babel-node script/twitter/twitter_follower_tweet.js",
     "twitter-br": "babel-node script/twitter/twitter_browser_search.js --word",
+    "twitter-la": "babel-node script/twitter/twitter_latest_tweet.js --word",
     "lint": "eslint . --ext .js"
   },
   "dependencies": {
     "async": "2.4.0",
+    "aws-sdk": "^2.205.0",
     "cheerio": "^1.0.0-rc.2",
     "commander": "2.9.0",
     "config": "1.25.1",

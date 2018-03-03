@@ -4,5 +4,10 @@
         "consumerSecret": "COMSUMER_SECRET",
         "accessTokenKey": "ACCESS_TOKEN_KEY",
         "accessTokenSecret": "ACCESS_TOKEN_SECRET"
+    },
+    "AWS": {
+    	"firehose": {
+    		"DeliveryStreamName": "DELIVERY_STREAM_NAME"
+    	}
     }
 }

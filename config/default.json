@@ -10,5 +10,12 @@
         "consumerSecret": null,
         "accessTokenKey": null,
         "accessTokenSecret": null
+    },
+    "AWS": {
+        "firehose": {
+            "endpoint": "https://firehose.ap-northeast-1.amazonaws.com",
+            "region": "ap-northeast-1",
+            "DeliveryStreamName": null
+        }
     }
 }

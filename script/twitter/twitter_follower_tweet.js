@@ -4,8 +4,10 @@ import moment from 'moment';
 import async from 'async';
 import config from 'config';
 import Twitter from 'twitter';
-import { twitter_follower as twitterFollower } from '~/sequelize/models/index';
-import { twitter_follower_tweet as twitterFollowerTwitter } from '~/sequelize/models/index';
+import {
+    twitter_follower as twitterFollower,
+    twitter_follower_tweet as twitterFollowerTwitter
+} from '~/sequelize/models/index';
 
 const client = new Twitter({
     consumer_key: config.get('twitter.consumerKey'),
