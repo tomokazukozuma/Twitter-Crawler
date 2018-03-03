@@ -11,9 +11,11 @@ import program from 'commander';
 
 program
     .option('-w, --word [word]', 'search word')
+    .option('-l, --lang [language]', 'target language')
     .parse(process.argv);
 
 const keyword = program.word;
+const language = program.lang || 'ja';
 
 const logFileName = 'log/' + keyword + '.csv';
 
@@ -35,10 +37,10 @@ async.waterfall([
         .set('Content-Type', 'application/json; charset=utf-8')
         .query({
             vertical: 'default',
-            // l: 'ja', // 引っかかる言語の投稿
+            l: language, // 引っかかる言語の投稿
             q: keyword,
             src: 'typd',
-            lang: 'ja'
+            // lang: 'ja' // アカウントの言語なのでスクレイピングでは関係ない
         })
         .end(function(error, res) {
             if (error) {
@@ -69,7 +71,7 @@ async.waterfall([
                     src: 'typd',
                     include_available_features: 1,
                     include_entities: 1,
-                    lang: 'ja',
+                    // lang: 'ja',
                     max_position: maxPosition, // 最後に取得した結果のmin_positionを渡す
                     reset_error_state: false
                 })
