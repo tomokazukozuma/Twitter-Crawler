@@ -62,7 +62,7 @@ async.waterfall([
                 return pastDatetime < lastCreatedAt;
             },
             function(callback) {
-                var request = http['get'](url + 'i/search/timeline');
+                var request = http['get'](url + 'i/search/timeline?f=tweets');
                 request
                 .set('Content-Type', 'application/json; charset=utf-8')
                 .query({
